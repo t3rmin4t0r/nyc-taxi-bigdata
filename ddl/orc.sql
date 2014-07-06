@@ -51,7 +51,15 @@ STORED AS ORC
 
 insert overwrite table trips select * from raw_trips 
 where medallion NOT IN ("medallion", "CFCD208495D565EF66E7DFF9F98764DA") and 
-hack_license != "CFCD208495D565EF66E7DFF9F98764DA"; 
+hack_license != "CFCD208495D565EF66E7DFF9F98764DA" and
+medallion is not null and
+pickup_datetime is not null
+; 
 insert overwrite table fare select * from raw_fare 
 where medallion NOT IN ("medallion","CFCD208495D565EF66E7DFF9F98764DA") and 
-hack_license != "CFCD208495D565EF66E7DFF9F98764DA"; 
+hack_license != "CFCD208495D565EF66E7DFF9F98764DA" and
+tip_amount < total_amount and
+medallion is not null and
+pickup_datetime is not null and
+tip_amount < total_amount
+; 
