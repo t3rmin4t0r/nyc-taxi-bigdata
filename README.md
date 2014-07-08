@@ -7,7 +7,7 @@ This contains Hive/Hadoop programs to load and analyze data from the NYC Taxi Tr
 
 http://chriswhong.com/open-data/foil_nyc_taxi/
 
-This is not a very large amount of data in ORC format (most of my queries take ~20-24s).
+This is not a very large amount of data in ORC format (most of my queries take ~20-24s with Hive/Tez).
 
     3.9 G  /apps/hive/warehouse/nyc_taxi_data.db/trips
     1.8 G  /apps/hive/warehouse/nyc_taxi_data.db/fare
