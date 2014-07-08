@@ -12,11 +12,11 @@ This is not a very large amount of data in ORC format (most of my queries take ~
     3.9 G  /apps/hive/warehouse/nyc_taxi_data.db/trips
     1.8 G  /apps/hive/warehouse/nyc_taxi_data.db/fare
 
-I am working on a fun project to figure out where a NYC Taxi driver should wait for a given time to get the best chance of a high fare passenger, given an hour of day, day of week, and month of year.
+I am working on a fun project to figure out where a NYC Taxi driver should wait to get the best chance of a high fare passenger, given an hour of day, day of week, and month of year.
 
-This should also help figure out the pick/drop off problems to draw a grid of common cycles within a city.
+By converting the whole city map into a sequence of hexagon tiles, an analysis of the pick/drop off points can be arrived at.
 
-Uber has a similar visualization, which I intend to apply over the same data.
+Uber has a similar visualization, which I intend to apply on somewhat cleaner data.
 
 http://bradleyvoytek.appspot.com/hoods.html
 
